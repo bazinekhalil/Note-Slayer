@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Note Slayer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="app-bar">
+    <div class="logo">⚔️ Note Slayer</div>
+    <div class="actions">
+      <button id="newNote" title="ملاحظة جديدة">＋</button>
+      <button id="exportNotes" title="تصدير">📤</button>
+      <label for="importFile" class="file-btn" title="استيراد">📥</label>
+      <input type="file" id="importFile" accept="application/json" />
+      <a id="openOptions" href="options.html" target="_blank" title="الإعدادات">⚙️</a>
+    </div>
+  </header>
+
+  <section class="search-row">
+    <input id="search" placeholder="ابحث في العناوين والمحتوى والوسوم..." />
+    <select id="tagFilter">
+      <option value="">الكل</option>
+    </select>
+  </section>
+
+  <section id="notesList" class="notes-list"></section>
+
+  <template id="noteCardTmpl">
+    <article class="note-card">
+      <div class="note-head">
+        <input class="title" placeholder="بدون عنوان" />
+        <div class="note-tools">
+          <button class="pin" title="تثبيت/فك التثبيت">📌</button>
+          <button class="color" title="لون">🛡️</button>
+          <button class="delete" title="حذف">🗑️</button>
+        </div>
+      </div>
+      <textarea class="content" placeholder="اكتب ملاحظتك هنا..."></textarea>
+      <div class="toolbar">
+        <button class="bold" title="غامق">B</button>
+        <button class="italic" title="مائل">I</button>
+        <button class="list" title="قائمة">•</button>
+        <button class="checkbox" title="مربع اختيار">☑︎</button>
+        <button class="emoji" title="رمز">🔥</button>
+        <input class="tags" placeholder="وسوم: مثال #عمل #فكرة" />
+      </div>
+      <footer class="meta">
+        <span class="dates"></span>
+        <span class="counts"></span>
+      </footer>
+    </article>
+  </template>
+
+  <script src="popup.js"></script>
+</body>
+</html>

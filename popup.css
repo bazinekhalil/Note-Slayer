@@ -1,0 +1,24 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:system-ui,Segoe UI,Arial,sans-serif}
+body{width:380px;min-height:540px;background:#0f1720;color:#e6eef6}
+.app-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:linear-gradient(90deg,#0b1220,#1b2733);border-bottom:2px solid #24303a}
+.logo{font-weight:800;letter-spacing:0.6px}
+.actions{display:flex;gap:6px;align-items:center}
+.actions button,.actions .file-btn,#openOptions{background:#111827;border:1px solid #2b3943;border-radius:10px;padding:6px 8px;cursor:pointer;color:#cbd5e1;text-decoration:none}
+#openOptions{display:inline-block}
+#importFile{display:none}
+.search-row{display:flex;gap:8px;padding:8px}
+.search-row input, .search-row select{flex:1;padding:8px;border-radius:10px;border:1px solid #24303a;background:#0b1220;color:#e6eef6}
+.notes-list{display:grid;grid-template-columns:1fr;gap:10px;padding:8px}
+.note-card{background:#071019;border:1px solid #1f2a33;border-radius:12px;padding:10px;box-shadow:0 3px 0 rgba(0,0,0,0.6)}
+.note-card .note-head{display:flex;align-items:center;gap:8px}
+.note-card .title{flex:1;border:none;border-bottom:1px dashed #15232b;padding:6px;background:transparent;font-weight:700;color:#dbeafe}
+.note-card .note-tools{display:flex;gap:6px}
+.note-card .note-tools button{background:#0b1220;border:1px solid #24303a;border-radius:8px;padding:4px 6px;cursor:pointer;color:#cbd5e1}
+.note-card .content{width:100%;min-height:100px;margin-top:6px;padding:8px;border:1px dashed #15232b;border-radius:8px;background:#061016;color:#e6eef6}
+.toolbar{display:flex;gap:6px;align-items:center;margin-top:6px}
+.toolbar button{background:#0b1220;border:1px solid #24303a;border-radius:8px;padding:4px 6px;cursor:pointer;color:#cbd5e1}
+.toolbar .tags{flex:1;padding:6px;border:1px solid #24303a;border-radius:8px;background:#071019;color:#cbd5e1}
+.meta{display:flex;justify-content:space-between;font-size:12px;color:#93a2b1;margin-top:6px}
+.note-card.pinned{border-color:#3b82f6;box-shadow:0 4px 0 rgba(59,130,246,0.15)}
+.color-palette{position:absolute;display:grid;grid-template-columns:repeat(5,20px);gap:6px;background:#071019;border:1px solid #24303a;padding:8px;border-radius:8px}
+.color-swatch{width:20px;height:20px;border-radius:4px;cursor:pointer;border:1px solid #15232b}
